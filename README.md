@@ -1,4 +1,4 @@
-# Game Snake
+# Snake
 
 Clasic snake videogame using windows form application c#. 
 
