@@ -1,6 +1,6 @@
 # Snake
 
-Clasic snake videogame using windows form application c#. 
+Clasic snake videogame made with windows form in c# (only available for Windows).
 
 ## Getting Started
 
