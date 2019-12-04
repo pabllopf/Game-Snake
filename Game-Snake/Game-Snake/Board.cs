@@ -8,14 +8,15 @@
 /// </summary>
 namespace Snake
 {
+    using Game_Snake;
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     using System.Drawing;
-    using System.Threading;
+    using System.IO;
     using System.Windows.Forms;
 
-    /// <summary>Interface of the videogame</summary>
-    /// <seealso cref="System.Windows.Forms.Form" />
+    /// <summary>Interface of the videogame</suma" />
     public partial class Board : Form
     {
         /// <summary>The snake</summary>
@@ -24,14 +25,41 @@ namespace Snake
         /// <summary>The food</summary>
         private Circle food = new Circle();
 
+        RecordSystem recordSystem;
+
         /// <summary>Initializes a new instance of the <see cref="Board"/> class.</summary>
         public Board()
         {
             this.InitializeComponent();
             this.SetFirstGame();
             this.SetGameTimer();
+            this.LoadRecord();
         }
-  
+
+        private void LoadRecord() 
+        {
+            string path = Application.StartupPath + "/record.json";
+
+            if (!File.Exists(path)) 
+            {
+                using (StreamWriter mylogs = File.AppendText(path)) 
+                { 
+                    mylogs.Close();
+                }
+                recordSystem = new RecordSystem();
+                string json = JsonConvert.SerializeObject(recordSystem);
+                System.IO.File.WriteAllText(path, json);
+            }
+
+            using (StreamReader jsonStream = File.OpenText(path))
+            {
+                recordSystem = new RecordSystem();
+                var json = jsonStream.ReadToEnd();
+                recordSystem = JsonConvert.DeserializeObject<RecordSystem>(json);
+            }
+
+            record.Text = recordSystem.recordVar.ToString();
+        }
         /// <summary>Sets the game timer.</summary>
         private void SetGameTimer() 
         {
@@ -44,6 +72,7 @@ namespace Snake
         private void SetFirstGame() 
         {
             this.welcome.Visible = true;
+            this.pause.Visible = false;
             this.pressStart.Visible = true;
             this.gameOver.Visible = false;
             new Settings();
@@ -62,6 +91,7 @@ namespace Snake
         private void ResetSettings() 
         {
             welcome.Visible = false;
+            pause.Visible = false;
             gameOver.Visible = false;
             pressStart.Visible = false;
             new Settings();
@@ -156,6 +186,12 @@ namespace Snake
             {
                 if (!welcome.Visible) 
                 {
+                    if (Settings.Score >= recordSystem.recordVar) 
+                    {
+                        recordSystem.recordVar = Settings.Score;
+                        record.Text = recordSystem.recordVar.ToString();
+                    }
+                    
                     gameOver.Visible = true;
                     pressStart.Visible = true;
                 }
@@ -220,6 +256,18 @@ namespace Snake
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             Input.ChangeState(e.KeyCode, true);
+            if (e.KeyCode == Keys.Space && pause.Visible == false)
+            {
+                this.gameTimer.Stop();
+                this.pause.Visible = true;
+                return;
+            }
+            if (e.KeyCode == Keys.Space && pause.Visible == true) 
+            {
+                this.gameTimer.Start();
+                this.pause.Visible = false;
+                return;
+            }
         }
 
         /// <summary>Handles the KeyUp event of the Form1 control.</summary>
@@ -295,7 +343,9 @@ namespace Snake
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void ExitToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            
             Application.Exit();
+            
         }
 
         /// <summary>Handles the FormClosing event of the Form1 control.</summary>
@@ -303,9 +353,14 @@ namespace Snake
         /// <param name="e">The <see cref="FormClosingEventArgs"/> instance containing the event data.</param>
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
+            this.gameTimer.Stop();
+            string path = Application.StartupPath + "/record.json";
+            string json = JsonConvert.SerializeObject(recordSystem);
+            System.IO.File.WriteAllText(path, json);
             if (MessageBox.Show("Do you want exit?", string.Empty, MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
             {
                 e.Cancel = true;
+                this.gameTimer.Start();
             }
         }
 

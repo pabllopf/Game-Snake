@@ -23,3 +23,7 @@ C:\Users\wwwam\Documents\Repositorios\Game-Snake\Game-Snake\Game-Snake\obj\Debug
 C:\Users\wwwam\Documents\Repositorios\Game-Snake\Game-Snake\Game-Snake\obj\Debug\Game-Snake.exe
 C:\Users\wwwam\Documents\Repositorios\Game-Snake\Game-Snake\Game-Snake\obj\Debug\Game-Snake.pdb
 C:\Users\wwwam\Documents\Repositorios\Game-Snake\Game-Snake\Game-Snake\obj\Debug\Snake.StartLogo.resources
+C:\Users\wwwam\Documents\Repositorios\Game-Snake\Game-Snake\Game-Snake\bin\Debug\Newtonsoft.Json.dll
+C:\Users\wwwam\Documents\Repositorios\Game-Snake\Game-Snake\Game-Snake\bin\Debug\Newtonsoft.Json.xml
+C:\Users\wwwam\Documents\Repositorios\Game-Snake\Game-Snake\Game-Snake\obj\Debug\Game-Snake.csproj.CopyComplete
+C:\Users\wwwam\Documents\Repositorios\Game-Snake\Game-Snake\Game-Snake\bin\Debug\AxInterop.WMPLib.dll

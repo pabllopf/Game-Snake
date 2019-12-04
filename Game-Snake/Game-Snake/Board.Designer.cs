@@ -45,6 +45,9 @@
             this.gameOver = new System.Windows.Forms.Label();
             this.pressStart = new System.Windows.Forms.Label();
             this.welcome = new System.Windows.Forms.Label();
+            this.pause = new System.Windows.Forms.Label();
+            this.labelrecord = new System.Windows.Forms.Label();
+            this.record = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbCanvas)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -133,10 +136,31 @@
             resources.ApplyResources(this.welcome, "welcome");
             this.welcome.Name = "welcome";
             // 
+            // pause
+            // 
+            resources.ApplyResources(this.pause, "pause");
+            this.pause.Name = "pause";
+            // 
+            // labelrecord
+            // 
+            resources.ApplyResources(this.labelrecord, "labelrecord");
+            this.labelrecord.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelrecord.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelrecord.Name = "labelrecord";
+            // 
+            // record
+            // 
+            resources.ApplyResources(this.record, "record");
+            this.record.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.record.Name = "record";
+            // 
             // Board
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.record);
+            this.Controls.Add(this.labelrecord);
+            this.Controls.Add(this.pause);
             this.Controls.Add(this.welcome);
             this.Controls.Add(this.pressStart);
             this.Controls.Add(this.gameOver);
@@ -177,6 +201,9 @@
         private System.Windows.Forms.Label gameOver;
         private System.Windows.Forms.Label pressStart;
         private System.Windows.Forms.Label welcome;
+        private System.Windows.Forms.Label pause;
+        private System.Windows.Forms.Label labelrecord;
+        private System.Windows.Forms.Label record;
     }
 }
 
