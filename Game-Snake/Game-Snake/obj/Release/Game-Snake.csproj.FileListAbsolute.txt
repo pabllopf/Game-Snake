@@ -1,0 +1,17 @@
+C:\Users\wwwam\Documents\Repositorios\Game-Snake\Game-Snake\Game-Snake\bin\Release\Game-Snake.exe.config
+C:\Users\wwwam\Documents\Repositorios\Game-Snake\Game-Snake\Game-Snake\bin\Release\Game-Snake.exe
+C:\Users\wwwam\Documents\Repositorios\Game-Snake\Game-Snake\Game-Snake\bin\Release\Game-Snake.pdb
+C:\Users\wwwam\Documents\Repositorios\Game-Snake\Game-Snake\Game-Snake\bin\Release\en\Game-Snake.resources.dll
+C:\Users\wwwam\Documents\Repositorios\Game-Snake\Game-Snake\Game-Snake\bin\Release\AxInterop.WMPLib.dll
+C:\Users\wwwam\Documents\Repositorios\Game-Snake\Game-Snake\Game-Snake\bin\Release\Newtonsoft.Json.dll
+C:\Users\wwwam\Documents\Repositorios\Game-Snake\Game-Snake\Game-Snake\bin\Release\Newtonsoft.Json.xml
+C:\Users\wwwam\Documents\Repositorios\Game-Snake\Game-Snake\Game-Snake\obj\Release\Game-Snake.csprojAssemblyReference.cache
+C:\Users\wwwam\Documents\Repositorios\Game-Snake\Game-Snake\Game-Snake\obj\Release\Snake.Board.resources
+C:\Users\wwwam\Documents\Repositorios\Game-Snake\Game-Snake\Game-Snake\obj\Release\Game_Snake.Properties.Resources.resources
+C:\Users\wwwam\Documents\Repositorios\Game-Snake\Game-Snake\Game-Snake\obj\Release\Snake.StartLogo.resources
+C:\Users\wwwam\Documents\Repositorios\Game-Snake\Game-Snake\Game-Snake\obj\Release\Snake.Board.en.resources
+C:\Users\wwwam\Documents\Repositorios\Game-Snake\Game-Snake\Game-Snake\obj\Release\Game-Snake.csproj.GenerateResource.cache
+C:\Users\wwwam\Documents\Repositorios\Game-Snake\Game-Snake\Game-Snake\obj\Release\en\Game-Snake.resources.dll
+C:\Users\wwwam\Documents\Repositorios\Game-Snake\Game-Snake\Game-Snake\obj\Release\Game-Snake.csproj.CopyComplete
+C:\Users\wwwam\Documents\Repositorios\Game-Snake\Game-Snake\Game-Snake\obj\Release\Game-Snake.exe
+C:\Users\wwwam\Documents\Repositorios\Game-Snake\Game-Snake\Game-Snake\obj\Release\Game-Snake.pdb
